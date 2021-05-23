@@ -1,0 +1,110 @@
+.sec-1 {
+  background-color: #f7f7f7;
+  padding: 20rem 15rem;
+  margin-top: -20vh;
+
+  .sec-1-h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: -3rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      to right,
+      $PRIMARY_COLOR-1,
+      $SECONDARY_COLOR-2
+    );
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.3rem;
+    transition: all 0.2s;
+    margin-bottom: 10rem;
+
+    &:hover {
+      transform: skewY(3deg) skewX(12deg);
+      text-shadow: 0.5rem 1rem 2rem $OPACITY-BL-COL;
+    }
+  }
+}
+
+.sec-1-para-1 {
+  margin-bottom: 3rem;
+}
+
+.sec-1-para-2 {
+  margin-bottom: 3rem;
+}
+
+.heading-tertiary {
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+
+.sec-1__btn-1 {
+  display: inline-block;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: $font-grid-row;
+    border-bottom: 1px solid $SECONDARY_COLOR-2;
+    color: $SECONDARY_COLOR-2;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-1rem);
+    background-color: $SECONDARY_COLOR-2;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
+    color: white;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.21);
+  }
+}
+
+.sec-2 {
+  background-image: linear-gradient(
+      to right bottom,
+      $PRIMARY_COLOR-1,
+      $SECONDARY_COLOR-2
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+
+  padding: 20rem 5rem;
+
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.sec-3 {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 18rem 0;
+  margin-top: -10rem;
+}
+
+.sec-4 {
+  text-align: center;
+  padding: 9rem 0rem;
+  position: relative;
+}
+
+.sec-5 {
+  padding: 15rem 0rem;
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    $PRIMARY_COLOR-1,
+    $SECONDARY_COLOR-2
+  );
+  text-align: center;
+}

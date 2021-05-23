@@ -1,0 +1,47 @@
+
+/* Animations for headings and button in header */
+
+@keyframes mov-m1 {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+    }
+  
+    80% {
+      transform: translateX(1rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: (0);
+    }
+  }
+  
+  @keyframes mov-m2 {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem);
+    }
+  
+    80% {
+      transform: translateX(-1rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: (0);
+    }
+  }
+  
+  @keyframes butt-mov {
+    0% {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: (0);
+    }
+  }
+  

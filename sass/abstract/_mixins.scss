@@ -1,0 +1,18 @@
+
+// grid-mixin :
+
+@mixin clear-fix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  top: 50%;
+  left: 50%;
+}
+
+///////////////////////////////////////////////
+

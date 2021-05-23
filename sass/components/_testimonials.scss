@@ -1,0 +1,70 @@
+.shape {
+  background-color: rgba(255,255,255,0.6);
+  width: 75%;
+  padding: 6rem;
+  transform: skewX(-12deg);
+  border-radius: 4px;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0,0,0,.28);
+
+  &__img {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    clip-path: circle(50% at 50% 50%);
+    margin-right: 3rem;
+    position: relative;
+    // -webkit-shape-outside: circle(50% at 50% 50%);
+    // -moz-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    &--1 {
+      height: 100%;
+      // width: 100%;
+      transform: translateX(-3.4rem) scale(1.2);
+      transition: all 0.5s;
+      object-fit: cover;
+    }
+  }
+
+  &__para {
+    transform: translateY(-4rem);
+    color: rgb(202, 199, 199);
+  }
+
+  &--headings{
+      text-transform: uppercase;
+  }
+
+  &__text {
+    position: absolute;
+    text-transform: uppercase;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: white;
+    z-index: 1;
+  }
+
+  &:hover &__img--1{
+    filter: blur(3px) brightness(80%);
+    transform: translateX(-3.4rem) scale(1);
+  }
+
+  &:hover &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    transition: all 0.3s;
+    opacity: 1;
+  }
+}
+
+.u-center {
+  transform: skewX(12deg);
+}

@@ -1,0 +1,131 @@
+.form-container {
+  max-width: 75%;
+  padding: 3rem 0;
+  display: block;
+  margin: auto;
+  border-radius: 3px;
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.792) 54%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: cover;
+  text-align: left;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.2);
+
+  &__h2 {
+    margin: auto;
+    margin: 1rem 4.3rem;
+  }
+}
+
+.form {
+  margin: 2.7rem 4.3rem;
+  width: 45%;
+
+  &__group {
+    width: 90%;
+  }
+
+  &__input {
+    background-color: white;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    outline: none;
+    color: black;
+    width: 100%;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    display: block;
+    transition: all 0.2s;
+    color: gray;
+
+    &::-moz-placeholder {
+      color: grey;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $SECONDARY_COLOR-2;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $NEW_COLOR;
+    }
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    transition: all 0.32s;
+    // display: block;
+    // transform: translateY(-8.5rem);
+    &--2 {
+      padding-left: 3rem;
+      cursor: pointer;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+    position: relative;
+    margin-top: -4.21rem;
+  }
+
+  &__radio-btn {
+    height: 3rem;
+    width: 3rem;
+    border: 4px solid $SECONDARY_COLOR-2;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -0.1px;
+    left: 0;
+    margin-right: 5rem;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: $SECONDARY_COLOR-2;
+      position: absolute;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      top: 50%;
+      left: 48%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.1s;
+    }
+  }
+
+  &__radio-inp{
+    opacity: 0;
+  }
+
+  &__radio-inp:checked ~ &__label--2 &__radio-btn::after {
+    opacity: 1;
+  }
+
+  &__sendBtn{
+    margin-top: -.8px;
+    padding: 1.3rem 5rem;
+    display: block;
+  }
+}

@@ -1,0 +1,130 @@
+.navbar {
+  position: relative;
+
+  &__back-bg {
+    background-image: radial-gradient(#80d671, #27b485);
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 7rem;
+    right: 5rem;
+    z-index: 1000;
+    transition: transform 0.8s;
+  }
+
+  &__checkbox {
+    opacity: 0;
+  }
+
+  &__checkbox:checked ~ &__back-bg {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    display: block;
+  }
+
+  &__label {
+    background-color: white;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 7rem;
+    right: 5rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3.5rem rgba($color: #000000, $alpha: 0.2);
+    cursor: pointer;
+    text-align: center;
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.8rem;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #333;
+      display: inline-block;
+      transition: all .2s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &__checkbox:checked + &__label &__icon{
+    width: 0;
+  }
+
+  &__checkbox:checked + &__label &__icon::before{
+    margin-left: -1.5rem;
+    transform: rotate(-135deg);
+    margin-top: .4rem;
+    top: 0;
+  }
+
+  &__checkbox:checked + &__label &__icon::after{
+    margin-left: -1.5rem;
+    transform: rotate(135deg);
+    margin-top: .4rem;
+    top: 0;
+  }
+
+  &__nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    transition: opacity 0.8s;
+  }
+
+  &__list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style: none;
+
+    &-items {
+      transition: all .3s;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      &:hover{
+        background-color: #075c32;
+        border-radius: 3px;
+        padding: 0 8rem;
+      }
+
+    }
+  }
+
+  &__links:link,
+  &__links:visited {
+    text-decoration: none;
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+  }
+}

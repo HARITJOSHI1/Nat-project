@@ -1,0 +1,22 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/Nat.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HARITJOSHI1/Nat-project.git"
+  },
+  "author": "Harit Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HARITJOSHI1/Nat-project/issues"
+  },
+  "homepage": "https://github.com/HARITJOSHI1/Nat-project#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "description": ""
+}
